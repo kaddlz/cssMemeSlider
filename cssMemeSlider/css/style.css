@@ -1,0 +1,165 @@
+html {
+  font-size: calc(100vw / 1920 * 10);
+}
+
+body {
+  background-color: #36374b;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slider {
+  width: 100rem;
+  height: 70rem;
+  overflow: hidden;
+  background-color: #36374b;
+  box-shadow: 4px 4px 50px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 5rem;
+}
+
+.slider__inner {
+  overflow: hidden;
+
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  transition: all .4s ease;
+}
+
+.slide {
+  width: 25%;
+  height: 100%;
+}
+
+.input {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7rem;
+}
+
+.description {
+  width: 30rem;
+  overflow: hidden;
+}
+
+.description__inner {
+  width: 400%;
+  display: flex;
+  transition: all .4s ease;
+}
+
+.text {
+  font-size: 3rem;
+  color: #fff;
+  width: 30rem;
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  gap: 2rem;
+}
+
+.paging {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: all .4s ease;
+  cursor: pointer;
+  border: 0.7rem solid rgb(212, 212, 212);
+}
+
+.paging:active {
+  border-color: #fff;
+}
+
+.paging:hover {
+  scale: 1.4;
+}
+
+
+#slide1:checked~.slider .slider__inner .slides {
+  margin-left: 0;
+}
+
+#slide2:checked~.slider .slider__inner .slides {
+  margin-left: -100%
+}
+
+#slide3:checked~.slider .slider__inner .slides {
+  margin-left: -200%;
+}
+
+#slide4:checked~.slider .slider__inner .slides {
+  margin-left: -300%;
+}
+
+#slide1:checked~.slider .footer .description .description__inner {
+  margin-left: 0;
+}
+
+#slide2:checked~.slider .footer .description .description__inner {
+  margin-left: -100%
+}
+
+#slide3:checked~.slider .footer .description .description__inner {
+  margin-left: -200%;
+}
+
+#slide4:checked~.slider .footer .description .description__inner {
+  margin-left: -300%;
+}
+
+#slide1:checked~.slider .footer .paging--1 {
+  scale: 1.2;
+  background-color: gray;
+}
+
+#slide2:checked~.slider .footer .paging--2 {
+  scale: 1.1;
+  background-color: gray;
+}
+
+#slide3:checked~.slider .footer .paging--3 {
+  scale: 1.1;
+  background-color: gray;
+}
+
+#slide4:checked~.slider .footer .paging--4 {
+  scale: 1.1;
+  background-color: gray;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 5rem;
+    padding-bottom: 0;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+}
