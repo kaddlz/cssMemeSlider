@@ -81,7 +81,15 @@ body {
 }
 
 .paging {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.paging__button {
   width: 3rem;
   height: 3rem;
   background-color: transparent;
@@ -91,11 +99,11 @@ body {
   border: 0.7rem solid rgb(212, 212, 212);
 }
 
-.paging:active {
+.paging:active .paging__button {
   border-color: #fff;
 }
 
-.paging:hover {
+.paging:hover .paging__button {
   scale: 1.4;
 }
 
@@ -132,22 +140,22 @@ body {
   margin-left: -300%;
 }
 
-#slide1:checked~.slider .footer .paging--1 {
+#slide1:checked~.slider .footer .paging--1 .paging__button {
   scale: 1.2;
   background-color: gray;
 }
 
-#slide2:checked~.slider .footer .paging--2 {
+#slide2:checked~.slider .footer .paging--2 .paging__button {
   scale: 1.1;
   background-color: gray;
 }
 
-#slide3:checked~.slider .footer .paging--3 {
+#slide3:checked~.slider .footer .paging--3 .paging__button {
   scale: 1.1;
   background-color: gray;
 }
 
-#slide4:checked~.slider .footer .paging--4 {
+#slide4:checked~.slider .footer .paging--4 .paging__button {
   scale: 1.1;
   background-color: gray;
 }
