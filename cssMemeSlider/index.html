@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <input class="input" type="radio" name="slider" id="slide1" checked>
+    <input class="input" type="radio" name="slider" id="slide2">
+    <input class="input" type="radio" name="slider" id="slide3">
+    <input class="input" type="radio" name="slider" id="slide4">
+    <div class="slider">
+      <div class="slider__inner">
+        <div class="slides">
+          <img class="slide slide--1" src="images/meme1.jpg" alt="">
+          <img class="slide" src="images/meme2.jpg" alt="">
+          <img class="slide" src="images/meme3.jpg" alt="">
+          <img class="slide" src="images/meme4.jpg" alt="">
+        </div>
+      </div>
+      <div class="footer">
+        <div class="description">
+          <div class="description__inner">
+            <div class="text">Первый слайд</div>
+            <div class="text">Второй слайд</div>
+            <div class="text">Третий слайд</div>
+            <div class="text">Четвертый слайд</div>
+          </div>
+        </div>
+        <div class="controls">
+          <label class="paging paging--1" for="slide1">
+            <div class="paging__button"></div>
+          </label>
+          <label class="paging paging--2" for="slide2">
+            <div class="paging__button"></div>
+          </label>
+          <label class="paging paging--3" for="slide3">
+            <div class="paging__button"></div>
+          </label>
+          <label class="paging paging--4" for="slide4">
+            <div class="paging__button"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- ($(LC_TIME=en_US.UTF-8 date '+%a, %b %d, %Y %I:%M:%S %p')) -->
